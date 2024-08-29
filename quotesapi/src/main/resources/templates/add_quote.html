@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Quote</title>
+</head>
+<body>
+    <h1>Add Quote</h1>
+    <form th:action="@{/save}" th:object="${quotes}" method="post">
+        <label for="quote">Quote:</label>
+        <input type="text" id="quote" th:field="*{quote}" /><br/><br/>
+        
+        <label for="author">Author:</label>
+        <input type="text" id="author" th:field="*{author}" /><br/><br/>
+        
+        <label for="language">Language:</label>
+        <input type="text" id="language" th:field="*{language}" /><br/><br/>
+        
+        <input type="submit" value="Save"/>
+    </form>
+</body>
+</html>

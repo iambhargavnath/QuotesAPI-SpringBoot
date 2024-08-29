@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Quotes</title>
+</head>
+<body>
+    <h1>All Quotes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Quote</th>
+                <th>Author</th>
+                <th>Language</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="quote : ${allQuotes}">
+                <td th:text="${quote.id}"></td>
+                <td th:text="${quote.quote}"></td>
+                <td th:text="${quote.author}"></td>
+                <td th:text="${quote.language}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/add">Add New Quote</a>
+</body>
+</html>
